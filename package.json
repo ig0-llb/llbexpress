@@ -1,0 +1,23 @@
+{
+  "name": "llbexpress-repo",
+  "version": "1.0.0",
+  "description": "\"Hello Git\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ig0-llb/llbexpress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ig0-llb/llbexpress/issues"
+  },
+  "homepage": "https://github.com/ig0-llb/llbexpress#readme",
+  "dependencies": {
+    "firebase": "^11.9.1"
+  }
+}
