@@ -2,6 +2,30 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.1/f
 import { db } from "./firebaseConfig.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js";
 import { app } from "./firebaseConfig.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
+
+// ⬇️ Tambahkan di sini
+async function tampilkanDaftarKurir() {
+  const tbody = document.getElementById("couriersTableBody");
+  if (!tbody) return;
+
+  tbody.innerHTML = ""; // Bersihkan isian lama
+
+  const snapshot = await getDocs(collection(db, "users"));
+  snapshot.forEach((doc) => {
+    const data = doc.data();
+    if (data.role === "kurir") {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${data.username}</td>
+        <td>${data.nama}</td>
+        <td>0</td>
+        <td><button class="btn btn-danger btn-sm" onclick="hapusKurir('${doc.id}')">Hapus</button></td>
+      `;
+      tbody.appendChild(tr);
+    }
+  });
+}
 
 const auth = getAuth(app);
 
@@ -25,3 +49,4 @@ async function tambahUser() {
     console.error("Error menambahkan dokumen:", error);
   }
 }
+document.addEventListener("DOMContentLoaded", tampilkanDaftarKurir);
