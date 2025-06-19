@@ -1,5 +1,5 @@
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "./firebaseConfig"; // Hubungkan ke firebaseConfig.js
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
+import { db } from "./firebaseConfig.js";
 
 async function tambahUser() {
   try {
