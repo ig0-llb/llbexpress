@@ -2,12 +2,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.1/fireba
 import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyC5bzEyULAAx1IQo_Zicas4ikbkK7gUklU",
+  authDomain: "llb-express.firebaseapp.com",
+  projectId: "llb-express",
+  storageBucket: "llb-express.firebasestorage.app",
+  messagingSenderId: "725553239087",
+  appId: "1:725553239087:web:d84b63f122c81d7d3562da"
 };
 
 const app = initializeApp(firebaseConfig);
